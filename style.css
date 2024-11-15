@@ -53,7 +53,7 @@ body {
 }
 
 .sidebar nav a:hover {
-    background-color: #ffffff; /* Darker color on hover */
+    background-color: #ffffff; /* Lighter color on hover */
     transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
@@ -61,14 +61,17 @@ body {
     transform: scale(0.95); /* Slightly shrink on click */
 }
 
-.sidebar nav a:hover {
-    text-decoration: underline;
-}
-
 .content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures main content is at the top and social links at the bottom */
     padding: 20px;
     overflow-y: auto;
+}
+
+.main-content {
+    flex: 1; /* Allows the main content to take up available space */
 }
 
 section {
@@ -90,12 +93,14 @@ section {
     margin: 0 auto 20px;
     border-radius: 8px;
 }
+
 .centered-title {
     text-align: center; /* Centers the text */
     font-size: 1.8rem; /* Optional: Keep consistent size */
     color: #333; /* Optional: Consistent color */
     margin-bottom: 20px; /* Add spacing below */
 }
+
 h2 {
     font-size: 1.5rem;
     color: #555;
@@ -122,6 +127,13 @@ p.justify {
 .social-links {
     text-align: center;
     margin-top: 20px;
+    padding-top: 10px; /* Optional padding for separation from content */
+    border-top: 1px solid #ddd; /* Optional border for separation */
+}
+.social-links2 {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px; /* Optional padding for separation from content */
 }
 
 .social-links a {
@@ -145,6 +157,7 @@ ul li {
     color: #666;
     margin-bottom: 10px;
 }
+
 .inline-emoji {
     width: 1em;
     height: 1em;
