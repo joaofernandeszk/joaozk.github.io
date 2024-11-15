@@ -3,47 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joao ZK - Portfolio</title>
+    <title>João Fernandes</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
 </head>
 <body>
-    <div class="sidebar">
-        <h1>Joao ZK</h1>
-        <nav>
-            <a href="#about" onclick="showSection('about')">About Me</a>
-            <a href="#experience" onclick="showSection('experience')">Experience</a>
-        </nav>
+    <div class="container">
+        <div class="sidebar">
+            <h1>Joao ZK</h1>
+            <nav>
+                <a href="#about" onclick="showSection('about')">About Me</a>
+                <a href="#native" onclick="showSection('native')">About Native</a>
+                <a href="#experience" onclick="showSection('experience')">Experience</a>
+            </nav>
+        </div>
+
+        <div class="content">
+            <!-- About Me Section -->
+            <section id="about">
+                <h2>About Me</h2>
+                <img src="avatar.png" alt="Joao ZK Photo" class="profile-photo">
+                <p>gm! I'm currently working on making Bitcoin more capital efficient at <a href="#native" onclick="showSection('native')">Native</a></p>
+                <div class="social-links">
+                    <a href="https://twitter.com/joaofernandeszk" target="_blank">Twitter</a> |
+                    <a href="https://github.com/joaofernandeszk" target="_blank">GitHub</a> |
+                    <a href="https://linkedin.com/in/joaofernandesys" target="_blank">LinkedIn</a>
+                </div>
+            </section>
+
+            <!-- Native Section -->
+            <section id="native" style="display: none;">
+                <img src="NativeLogo Vertical.png" alt="Native logo" class="native-logo">
+                <p><strong>TLDR</strong> is that Native brings 🐝 Byield 🐝 to every Bitcoin Holder.</p>
+                <p></p>
+            </section>
+            <!-- Experience Section -->
+            <section id="experience" style="display: none;">
+                <h2>Experience</h2>
+                <ul>
+                    <li><strong>Native</strong> - Business Development and Ecosystem Lead (2024 - Present)</li>
+                    <li><strong>Rollux</strong> - Ecosystem Growth & Partnerships (Previous Role)</li>
+                    <li><strong>Syscoin</strong> - BD & Partnerships(Previous Role)</li>
+                </ul>
+            </section>
+        </div>
     </div>
-
-    <main>
-        <!-- About Me Section -->
-        <section id="about">
-            <h2>About Me</h2>
-            <img src="avatar.png" alt="Joao ZK Photo" class="profile-photo">
-            <p>Hello! I’m Joao Fernandes, a Business Development and Partnerships Lead with a focus on blockchain technology. I work with companies to create innovative solutions, drive growth, and foster partnerships in the Web3 space.</p>
-            <div class="social-links">
-                <a href="https://twitter.com/joaofernandeszk" target="_blank">Twitter</a> |
-                <a href="https://github.com/joaofernandeszk" target="_blank">GitHub</a> |
-                <a href="https://linkedin.com/in/joaofernandesys" target="_blank">LinkedIn</a>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" style="display: none;">
-            <h2>Experience</h2>
-            <ul>
-                <li><strong>Native</strong> - Business Development and Partnerships Lead (2024 - Present)</li>
-                <li><strong>Syscoin</strong> - Ecosystem Growth & Partnerships (Previous Role)</li>
-                <li><strong>Rollux</strong> - Web3 Business Development (Previous Role)</li>
-                <!-- Add more experience as needed -->
-            </ul>
-        </section>
-    </main>
 
     <script>
         function showSection(sectionId) {
+            // Hide all sections
             document.getElementById('about').style.display = 'none';
+            document.getElementById('native').style.display = 'none';
             document.getElementById('experience').style.display = 'none';
+
+
+            // Show the selected section
             document.getElementById(sectionId).style.display = 'block';
         }
     </script>
