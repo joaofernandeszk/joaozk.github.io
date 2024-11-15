@@ -28,7 +28,7 @@ body {
 .sidebar {
     width: 200px;
     padding: 20px;
-    background-color: #f1f1f1;
+    background-color: #CAC9FF;
     border-right: 1px solid #ddd;
 }
 
@@ -42,8 +42,23 @@ body {
     display: block;
     margin-bottom: 10px;
     text-decoration: none;
-    color: #007bff;
+    color: #141313;
     font-weight: bold;
+    background-color: #CAC9FF; /* Button color */
+    padding: 10px 15px; /* Padding for button-like appearance */
+    border-radius: 8px; /* Rounded corners */
+    border: 2px solid #ffffff;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+.sidebar nav a:hover {
+    background-color: #ffffff; /* Darker color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.sidebar nav a:active {
+    transform: scale(0.95); /* Slightly shrink on click */
 }
 
 .sidebar nav a:hover {
@@ -63,7 +78,7 @@ section {
 .profile-photo {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
+    border-radius: 0%;
     display: block;
     margin: 0 auto 20px;
 }
@@ -75,7 +90,12 @@ section {
     margin: 0 auto 20px;
     border-radius: 8px;
 }
-
+.centered-title {
+    text-align: center; /* Centers the text */
+    font-size: 1.8rem; /* Optional: Keep consistent size */
+    color: #333; /* Optional: Consistent color */
+    margin-bottom: 20px; /* Add spacing below */
+}
 h2 {
     font-size: 1.5rem;
     color: #555;
@@ -86,6 +106,15 @@ h2 {
 p {
     text-align: center;
     font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+p.justify {
+    text-align: justify; /* Justify text for a clean, aligned look */
+    padding: 0 10px; /* Add padding for spacing */
+    line-height: 1.6; /* Increase line height for readability */
+    font-size: 1rem; /* Standard font size */
     color: #666;
     margin-bottom: 20px;
 }
@@ -115,4 +144,9 @@ ul li {
     font-size: 1rem;
     color: #666;
     margin-bottom: 10px;
+}
+.inline-emoji {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.2em;
 }
