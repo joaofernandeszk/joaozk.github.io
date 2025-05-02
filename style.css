@@ -163,3 +163,7 @@ ul li {
     height: 1em;
     vertical-align: -0.2em;
 }
+
+li {
+    margin-bottom: 12px;
+  }
