@@ -134,24 +134,49 @@ body::before {
     transform: translateY(-2px);
 }
 
-.hero-btn {
-    display: inline-block;
+.hero-nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     margin-top: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 32px;
-    background: var(--gradient);
-    border-radius: 10px;
-    transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
 }
 
-.hero-btn:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.25);
+.hero-nav a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.hero-nav a:hover {
+    color: var(--accent-1);
+}
+
+.hero-nav-dot {
+    color: #3f3f46;
+    font-size: 0.85rem;
+    user-select: none;
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #3f3f46;
+    animation: bounce 2s ease infinite;
+    transition: color 0.2s;
+    display: flex;
+}
+
+.scroll-hint:hover {
+    color: var(--text-muted);
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
 }
 
 /* ========================================
