@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV — João Fernandes</title>
+    <meta name="description" content="CV of João Fernandes — Crypto BD & Startup Operator">
+    <link rel="icon" href="../favicon-32x32.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ========================================
+           CV — Web + Print Styles
+           ======================================== */
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #09090b;
+            --surface: #141419;
+            --border: #1e1e26;
+            --text: #e4e4e7;
+            --text-muted: #a1a1aa;
+            --accent-1: #3b82f6;
+            --accent-2: #1d4ed8;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            color: var(--accent-1);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+
+        /* Layout */
+        .cv {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 64px 24px 48px;
+        }
+
+        /* Back link */
+        .back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            transition: color 0.2s;
+        }
+
+        .back:hover {
+            color: var(--accent-1);
+        }
+
+        /* Header */
+        .cv-header {
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .cv-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            border: 2px solid var(--border);
+        }
+
+        .cv-header-info {
+            flex: 1;
+        }
+
+        .cv-header-info h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: -0.02em;
+            margin-bottom: 2px;
+        }
+
+        .cv-headline {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--accent-1);
+            margin-bottom: 4px;
+        }
+
+        .cv-location {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .cv-contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 0.8rem;
+        }
+
+        .cv-contact a {
+            color: var(--text-muted);
+        }
+
+        .cv-contact a:hover {
+            color: var(--accent-1);
+        }
+
+        /* Sections */
+        .cv-section {
+            margin-bottom: 40px;
+        }
+
+        .cv-section-title {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-1);
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* Summary */
+        .cv-summary {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+        }
+
+        /* Highlights */
+        .cv-highlights {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cv-highlights li {
+            font-size: 0.88rem;
+            color: var(--text);
+            line-height: 1.65;
+            padding-left: 16px;
+            position: relative;
+            margin-bottom: 4px;
+        }
+
+        .cv-highlights li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: var(--accent-1);
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        /* Experience entries */
+        .cv-entry {
+            margin-bottom: 28px;
+        }
+
+        .cv-entry:last-child {
+            margin-bottom: 0;
+        }
+
+        .cv-entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .cv-entry-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .cv-entry-title span {
+            font-weight: 400;
+            color: var(--text-muted);
+        }
+
+        .cv-entry-date {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .cv-entry-role {
+            font-size: 0.8rem;
+            color: var(--accent-1);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .cv-entry ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cv-entry li {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.65;
+            padding-left: 16px;
+            position: relative;
+            margin-bottom: 4px;
+        }
+
+        .cv-entry li::before {
+            content: '·';
+            position: absolute;
+            left: 0;
+            color: var(--accent-1);
+            font-weight: 700;
+        }
+
+        /* Skills */
+        .cv-skills-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 8px 16px;
+            font-size: 0.85rem;
+        }
+
+        .cv-skill-label {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .cv-skill-value {
+            color: var(--text-muted);
+        }
+
+        /* Education */
+        .cv-edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .cv-edu-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .cv-edu-date {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .cv-edu-detail {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* Footer */
+        .cv-footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .cv-footer p {
+            font-size: 0.75rem;
+            color: #3f3f46;
+        }
+
+        /* Print button */
+        .print-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 8px 16px;
+            cursor: pointer;
+            transition: border-color 0.2s, color 0.2s;
+            font-family: inherit;
+        }
+
+        .print-btn:hover {
+            border-color: var(--accent-1);
+            color: var(--text);
+        }
+
+        .cv-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        /* ========================================
+           Responsive
+           ======================================== */
+        @media (max-width: 640px) {
+            .cv {
+                padding: 32px 20px;
+            }
+
+            .cv-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .cv-contact {
+                justify-content: center;
+            }
+
+            .cv-entry-header {
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .cv-edu-header {
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .cv-skills-grid {
+                grid-template-columns: 1fr;
+                gap: 4px;
+            }
+
+            .cv-actions {
+                flex-direction: column;
+                gap: 12px;
+                align-items: flex-start;
+            }
+        }
+
+        /* ========================================
+           Print Styles
+           ======================================== */
+        @media print {
+            :root {
+                --bg: #fff;
+                --surface: #fff;
+                --border: #e5e5e5;
+                --text: #1a1a1a;
+                --text-muted: #555;
+                --accent-1: #4f46e5;
+                --accent-2: #4f46e5;
+            }
+
+            body {
+                background: #fff;
+                color: #1a1a1a;
+                font-size: 11pt;
+            }
+
+            .cv {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            .back, .print-btn, .cv-actions, .cv-footer {
+                display: none !important;
+            }
+
+            .cv-header {
+                margin-bottom: 24px;
+                padding-bottom: 16px;
+            }
+
+            .cv-avatar {
+                width: 60px;
+                height: 60px;
+            }
+
+            .cv-header-info h1 {
+                font-size: 1.4rem;
+                color: #1a1a1a;
+            }
+
+            .cv-headline {
+                color: #4f46e5;
+            }
+
+            .cv-section {
+                margin-bottom: 20px;
+            }
+
+            .cv-section-title {
+                color: #4f46e5;
+                margin-bottom: 12px;
+                padding-bottom: 4px;
+            }
+
+            .cv-entry {
+                margin-bottom: 16px;
+            }
+
+            .cv-entry-title {
+                color: #1a1a1a;
+            }
+
+            .cv-entry-role {
+                color: #4f46e5;
+            }
+
+            .cv-entry li::before {
+                color: #4f46e5;
+            }
+
+            .cv-contact a {
+                color: #555;
+            }
+
+            a {
+                color: #4f46e5;
+            }
+
+            .cv-edu-title {
+                color: #1a1a1a;
+            }
+
+            .cv-skill-label {
+                color: #1a1a1a;
+            }
+
+            @page {
+                margin: 1.5cm 2cm;
+                size: A4;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cv">
+
+        <div class="cv-actions">
+            <a href="/" class="back">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+                joaozk.com
+            </a>
+            <button class="print-btn" onclick="window.print()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                Save as PDF
+            </button>
+        </div>
+
+        <!-- Header -->
+        <header class="cv-header">
+            <img src="../avatar.png" alt="João Fernandes" class="cv-avatar" width="80" height="80">
+            <div class="cv-header-info">
+                <h1>João Fernandes</h1>
+                <p class="cv-headline">Zero-to-One BD Operator · Crypto Ecosystems · Sui / Bitcoin L1/L2</p>
+                <p class="cv-location">Lisbon, Portugal</p>
+                <div class="cv-contact">
+                    <a href="mailto:joao.fernandes1221@gmail.com">joao.fernandes1221@gmail.com</a>
+                    <a href="https://joaozk.com">joaozk.com</a>
+                    <a href="https://linkedin.com/in/joaofernandeszk" target="_blank">LinkedIn</a>
+                    <a href="https://x.com/joaofernandeszk" target="_blank">X</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Summary -->
+        <section class="cv-section">
+            <h2 class="cv-section-title">Summary</h2>
+            <p class="cv-summary">Zero-to-one BD operator. I join early-stage projects before there's a playbook and build the BD engine, community infrastructure, and partner pipeline from scratch. Did this successfully across 4 crypto projects. I genuinely believe AI changes how small teams compete, and I want to be the person who knows how to use it best. I build agentic workflows, vibecode tools, and automate ops so teams can move faster with less. I'm the person you bring in when nothing exists yet and something needs to exist fast.</p>
+        </section>
+
+        <!-- Key Highlights -->
+        <section class="cv-section">
+            <h2 class="cv-section-title">Key Highlights</h2>
+            <ul class="cv-highlights">
+                <li>Built BD, community, and ecosystem presence from zero for a pre-launch BTC interop protocol on Sui</li>
+                <li>Grew a protocol community from 10k to 70k pre-launch. Discord, KOL program, regional leads, all from scratch</li>
+                <li>Grew Syscoin active user base 5x in under 3 months</li>
+                <li>Founding-stage operator across 4 crypto projects. Built BD infrastructure from zero each time</li>
+                <li>Designed structured adoption programs (LP incentives, points systems, KOL alliances) that became core go-to-market tools</li>
+            </ul>
+        </section>
+
+        <!-- Work Experience -->
+        <section class="cv-section">
+            <h2 class="cv-section-title">Work Experience</h2>
+
+            <div class="cv-entry">
+                <div class="cv-entry-header">
+                    <div class="cv-entry-title">Credible <span>— Protected Crowdfunding on Sui</span></div>
+                    <div class="cv-entry-date">2025 — Present</div>
+                </div>
+                <p class="cv-entry-role">BD Operator</p>
+                <ul>
+                    <li>Building partner pipeline and GTM positioning for a novel crowdfunding model on Sui. Principal-protected raises where participants can reclaim funds if milestones are missed</li>
+                </ul>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-header">
+                    <div class="cv-entry-title">Satelyx <span>— Open Standard for Commercial Space Access</span></div>
+                    <div class="cv-entry-date">2024 — Present</div>
+                </div>
+                <p class="cv-entry-role">Founding Member / General Manager</p>
+                <ul>
+                    <li>Running day-to-day operations and business strategy for a plug-and-play satellite platform. Making commercial space access simple and accessible without custom builds or specialist knowledge</li>
+                </ul>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-header">
+                    <div class="cv-entry-title">Native <span>— Bitcoin Interoperability Protocol on Sui</span></div>
+                    <div class="cv-entry-date">Oct 2024 — 2026</div>
+                </div>
+                <p class="cv-entry-role">BD & Partnerships Lead</p>
+                <ul>
+                    <li>Built the BD engine, community, and ecosystem presence from zero for a pre-launch BTC interop protocol on Sui. Project entered a transitional period</li>
+                    <li>Executed the BD side of Native's pivot from a Cosmos-based L1 to Sui. Repositioned partner relationships, rebuilt the pipeline, and aligned the ecosystem narrative around nBTC and BYield</li>
+                    <li>Scaled community from 10k to 70k across Twitter and Discord pre-launch. Built all community infrastructure from scratch: Discord architecture, regional community leads, KOL Ambassador program, Bee Hive engagement squad</li>
+                    <li>Built BD pipeline across Sui DeFi protocols, wallets, infra providers, and off-chain partners. Secured integration commitments and liquidity partnerships ahead of planned launch</li>
+                    <li>Designed structured adoption programs: nBTC LP Program, Hive points system, KOL alliances. Systems that became core GTM tools</li>
+                    <li>Translated MPC, SPV, and dWallet/IKA architecture into pitch decks, one-pagers, and partner packs that non-technical partners and funds could act on</li>
+                </ul>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-header">
+                    <div class="cv-entry-title">Rollux <span>— Bitcoin L2</span></div>
+                    <div class="cv-entry-date">Apr 2023 — Aug 2024</div>
+                </div>
+                <p class="cv-entry-role">BD & Ecosystem Lead</p>
+                <ul>
+                    <li>One of the first people on the project. Shaped the initial pitch, positioning, and partnership strategy from day one before a dedicated BD function existed</li>
+                    <li>Built Rollux's launch partnership program from zero. Onboarded early DeFi protocols and infra partners to form the initial ecosystem</li>
+                    <li>Created partner onboarding playbooks, CRM workflows, and retention processes that became the operating model</li>
+                    <li>Represented Rollux at conferences and organized side-events to drive ecosystem adoption and generate BD leads</li>
+                </ul>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-header">
+                    <div class="cv-entry-title">Syscoin <span>— Bitcoin Merged-Mined Modular L1</span></div>
+                    <div class="cv-entry-date">Apr 2022 — Aug 2024</div>
+                </div>
+                <p class="cv-entry-role">Business Developer & Ecosystem Growth</p>
+                <ul>
+                    <li>Grew active user base 5x in under 3 months through community programs and digital campaigns. Strongest traction metric despite limited ecosystem focus due to Rollux prioritization</li>
+                    <li>Built internal ops from scratch: communication channels, CRMs, shared drives, documentation systems</li>
+                    <li>Drove lead generation, due diligence, and partner engagement; represented Syscoin at conferences and events</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="cv-section">
+            <h2 class="cv-section-title">Education</h2>
+            <div class="cv-edu-header">
+                <div class="cv-edu-title">Professional Higher Technical Course in Technologies and Programming of Information Systems</div>
+                <div class="cv-edu-date">2018 — 2022</div>
+            </div>
+            <p class="cv-edu-detail">Higher technical qualification (Level 5 EQF, roughly equivalent to a Foundation Degree)</p>
+        </section>
+
+        <!-- Skills & Tools -->
+        <section class="cv-section">
+            <h2 class="cv-section-title">Skills & Tools</h2>
+            <div class="cv-skills-grid">
+                <div class="cv-skill-label">BD & Partnerships</div>
+                <div class="cv-skill-value">BD strategy, outreach, and pipeline management. Launch partner acquisition, liquidity partnerships, LP programs. Strategic partnership development. Pitch strategy, deck building, and presentations for partners, users, and investors</div>
+                <div class="cv-skill-label">Community & Growth</div>
+                <div class="cv-skill-value">Community architecture from scratch. Discord setup, role structures, campaign design. KOL Ambassador programs (setup + management). Reply squads / engagement programs (Bee Hive model). Regional community lead recruitment and coordination</div>
+                <div class="cv-skill-label">Ops & Execution</div>
+                <div class="cv-skill-value">Event planning and conference coordination. Website planning and execution. Content strategy and editorial planning. NFT project management. GTM program design (points systems, incentive programs, adoption mechanics). Cross-functional coordination across product, design, social, and community teams</div>
+                <div class="cv-skill-label">AI & Tooling</div>
+                <div class="cv-skill-value">Fast at picking up new tools and squeezing everything out of them. Build custom AI workflows for research, sales pipelines, competitive analysis, and content production using Claude, OpenClaw, and agentic toolchains. Vibecode websites and internal tools (Claude Code, Cursor). Automate ops with Google Workspace — AI-powered docs, NotebookLM for deep research, workflow automations. Set up and run any CRM (Monday, HubSpot, Notion). The type to build a tool for the team before anyone asks for one</div>
+                <div class="cv-skill-label">Languages</div>
+                <div class="cv-skill-value">Portuguese (native), English (fluent)</div>
+            </div>
+        </section>
+
+        <!-- Footer (web only) -->
+        <footer class="cv-footer">
+            <p>joaozk.com/cv</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
