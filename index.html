@@ -3,147 +3,319 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>João Fernandes | Builder & Operator</title>
-    <meta name="description" content="BD and ops operator for early-stage startups. I build the systems behind partnerships, and increasingly, full products, using AI tooling.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#060b0d">
+    <meta name="description" content="João Fernandes builds companies and operating systems around complex technology. General Manager at SATELYX and Co-founder of ObraXRAY.">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <link rel="canonical" href="https://joaozk.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="João Fernandes | Orbital Operations">
+    <meta property="og:description" content="Explore the operating systems behind SATELYX, ObraXRAY, and João Fernandes' earlier infrastructure work.">
+    <meta property="og:url" content="https://joaozk.com/">
+    <meta property="og:image" content="https://joaozk.com/assets/os/orbital-field-v1.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>João Fernandes | Orbital Operations</title>
     <link rel="icon" href="favicon-32x32.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="assets/os/orbital-hangar-v1.webp" as="image" type="image/webp" fetchpriority="high">
+    <link rel="stylesheet" href="style.min.css?v=3c563cf0">
+    <script src="script.min.js?v=afe8f34e" defer></script>
 </head>
 
-<body>
+<body class="prelaunch">
+    <a class="skip-link" href="#mission-map">Skip to orbital map</a>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-inner">
-            <div class="avatar-wrapper">
-                <img src="avatar.png" alt="João Fernandes" class="avatar" width="140" height="140">
-            </div>
-            <h1>João Fernandes</h1>
-            <p class="tagline">Builder & Operator</p>
-            <p class="hero-desc">BD and ops operator for early-stage startups. I build the systems behind partnerships, and increasingly, full products, using AI tooling.</p>
-            <div class="social-row">
-                <a href="https://x.com/joaofernandeszk" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                </a>
-                <a href="https://linkedin.com/in/joaofernandeszk" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                </a>
-            </div>
-            <nav class="hero-nav">
-                <a href="#about">About</a>
-                <span class="hero-nav-dot">·</span>
-                <a href="#projects">Projects</a>
-                <span class="hero-nav-dot">·</span>
-                <a href="/cv">CV</a>
-            </nav>
+    <div class="boot-screen" id="boot-screen" aria-hidden="true">
+        <div class="boot-lockup"><span>JF</span><i></i><strong>ORBITAL OPERATIONS</strong></div>
+        <div class="boot-progress"><i></i></div>
+    </div>
+
+    <section class="launch-sequence" id="launch-sequence" role="dialog" aria-modal="true" aria-labelledby="launch-title">
+        <div class="launch-backdrop" aria-hidden="true"></div>
+        <div class="launch-door launch-door-left" aria-hidden="true"><i></i></div>
+        <div class="launch-door launch-door-right" aria-hidden="true"><i></i></div>
+        <div class="launch-atmosphere" aria-hidden="true"></div>
+        <div class="launch-rails" aria-hidden="true"><i></i><i></i></div>
+        <div class="launch-craft" aria-hidden="true">
+            <span class="craft-shadow"></span>
+            <img src="assets/os/operator-ship-v2.svg" alt="" width="240" height="150">
+            <span class="craft-engine"></span>
         </div>
-        <a href="#about" class="scroll-hint" aria-label="Scroll down">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-        </a>
+
+        <header class="launch-header">
+            <div class="launch-identity"><span>JF</span><div><strong>ORBITAL OPERATIONS</strong><small>OPERATOR ENVIRONMENT</small></div></div>
+            <div class="launch-session"><span>SESSION</span><strong>JF-01 / LISBON</strong></div>
+        </header>
+
+        <div class="launch-copy">
+            <p class="launch-eyebrow">FLIGHT SYSTEM READY</p>
+            <h1 id="launch-title">Build the systems.<br><span>Move the mission.</span></h1>
+            <p class="launch-lede">Company building, commercial execution and AI-enabled operating systems around complex technology.</p>
+            <div class="launch-readiness" role="group" aria-label="Launch readiness">
+                <div><span>PRIMARY VECTOR</span><strong>SATELYX</strong></div>
+                <div><span>FLIGHT MODE</span><strong>FREE NAVIGATION</strong></div>
+                <div><span>SYSTEM STATUS</span><strong class="status-nominal">NOMINAL</strong></div>
+            </div>
+            <div class="launch-actions">
+                <button class="launch-primary" id="initiate-launch" type="button"><span>INITIATE LAUNCH</span><i aria-hidden="true">↗</i></button>
+                <button class="launch-skip" id="skip-launch" type="button">SKIP TO OPERATIONS</button>
+            </div>
+            <small class="launch-sound-note">CINEMATIC AUDIO ENABLES ON LAUNCH</small>
+        </div>
+
+        <div class="launch-telemetry" aria-hidden="true">
+            <span>ALT 408 KM</span><i></i><span>ORBITAL INSERTION</span><i></i><span id="launch-countdown">T− READY</span>
+        </div>
+        <div class="launch-status" id="launch-status" aria-live="polite">AWAITING OPERATOR</div>
     </section>
 
-    <!-- About -->
-    <section class="section fade-in" id="about">
-        <div class="container">
-            <h2>About me</h2>
-            <p class="about-text">Portuguese, based in Lisbon. I've spent the last 4+ years at early-stage startups, mostly in BD and partnerships, more recently building products with AI tooling. I tend to show up early on a project and figure out how things should actually work, whether that's a partner pipeline, an internal tool, or a full product.</p>
-            <p class="about-text">I'm proactive and self-sufficient. Give me a problem and I'll figure out the systems, the product, and the story without waiting for someone to hand me a playbook. I do well working solo, and just as well across teams.</p>
-        </div>
-    </section>
-
-    <!-- How I Work -->
-    <section class="section fade-in" id="how">
-        <div class="container">
-            <h2>How I work</h2>
-            <div class="prose-blocks">
-                <div class="prose-block">
-                    <h3>The systems come before the relationships</h3>
-                    <p>Most of my BD work starts with setting up what doesn't exist yet: the CRM, the points program, the Discord, the partner pack, the deck, sometimes a small app to run all of it. Once that's in place, the relationships and the deals come a lot easier.</p>
-                </div>
-                <div class="prose-block">
-                    <h3>I translate complex into simple</h3>
-                    <p>Most of the projects I've worked on had deeply technical products. MPC custody, Bitcoin interoperability, satellite infrastructure. My job was turning that into something a partner, LP, or user could actually understand and act on.</p>
-                </div>
-                <div class="prose-block">
-                    <h3>AI is part of how I work, not a talking point</h3>
-                    <p>I vibecode internal tools, build AI workflows for research and outreach, and automate ops with whatever's available. If a tool I need doesn't exist yet, I'll usually just build it.</p>
-                </div>
+    <main class="desktop" id="desktop">
+        <header class="os-bar">
+            <div class="os-brand">
+                <span class="os-logo">JF</span>
+                <div><strong>JOÃO FERNANDES</strong><small>ORBITAL OPERATIONS</small></div>
             </div>
-        </div>
-    </section>
+            <div class="os-actions">
+                <button id="mission-toggle" type="button" aria-expanded="false" aria-controls="mission-files">MISSIONS</button>
+                <button id="system-toggle" type="button" aria-expanded="false" aria-controls="system-menu">SYSTEM</button>
+                <span class="online-light" role="img" aria-label="System online"></span>
+            </div>
+            <aside class="system-menu" id="system-menu" aria-label="System controls" hidden>
+                <div class="system-menu-heading"><span>FLIGHT SYSTEM</span><strong>ONLINE</strong></div>
+                <section class="flight-console" aria-label="Flight status">
+                    <div class="flight-status-row"><span>STATUS</span><strong id="flight-status">AWAITING VECTOR</strong></div>
+                    <div class="flight-status-row"><span>POSITION</span><strong id="flight-position">X 000 / Y 000</strong></div>
+                    <div class="flight-status-row"><span>VELOCITY</span><strong id="flight-velocity">0.00 KM/S</strong></div>
+                    <div class="flight-status-row"><span>TRAFFIC</span><strong id="traffic-status">SCANNING</strong></div>
+                    <div class="signal-meter"><span>LINK</span><i><b id="signal-bar"></b></i><strong id="signal-value">100%</strong></div>
+                </section>
+                <div class="system-actions">
+                    <button id="sound-toggle" type="button" aria-pressed="false">SOUND OFF</button>
+                    <button id="replay-launch" type="button">REPLAY LAUNCH</button>
+                </div>
+                <div class="system-controls">
+                    <span><kbd>WASD</kbd> MANUAL THRUST</span>
+                    <span><kbd>CLICK</kbd> SET VECTOR</span>
+                    <span><kbd>ESC</kbd> CLOSE MODULE</span>
+                </div>
+                <div class="system-progress">
+                    <span>FILES DISCOVERED</span><i><b id="discovery-bar"></b></i><strong id="discovery-count">0 / 5</strong>
+                </div>
+                <div class="task-files" id="task-files" role="group" aria-label="Mounted files"></div>
+                <div class="system-menu-footer"><span>WORLD <strong id="world-size">EXPANDED</strong></span><time id="system-clock">00:00:00</time></div>
+            </aside>
+        </header>
 
-    <!-- Projects -->
-    <section class="section fade-in" id="projects">
-        <div class="container">
-            <h2>What I'm building</h2>
-            <p class="about-text" style="margin-bottom: 24px;">Projects I'm building right now.</p>
-            <div class="project-cards">
-                <div class="project-card">
-                    <h3>ObraXRAY</h3>
-                    <p class="project-type">Founder</p>
-                    <p>Contractor risk platform for Portugal. Pulls from 9 official databases and runs 20+ automated checks on any construction company, turning court records and regulatory filings into a risk score in seconds. Live with paying customers, and now expanding into a B2B API and portal for real estate and insurance partners. Built with my brother, almost entirely with AI tooling.</p>
-                    <div class="project-links">
-                        <a href="https://obraxray.com/" target="_blank" rel="noopener noreferrer">Website</a>
-                        <a href="https://x.com/ObraXRAY" target="_blank" rel="noopener noreferrer">X</a>
+        <section class="desktop-space" id="mission-map" aria-label="Interactive orbital mission map">
+            <div class="space-plate" aria-hidden="true"></div>
+            <div class="orbital-horizon" aria-hidden="true"></div>
+            <canvas id="orbit-canvas" tabindex="0" aria-label="Fly between five mission destinations. Use WASD, arrow keys, or select a destination from Mission Files."></canvas>
+            <div class="depth-grid" aria-hidden="true"></div>
+            <div class="foreground-dust" aria-hidden="true"></div>
+            <div class="crt-grid" aria-hidden="true"></div>
+            <div class="screen-grain" aria-hidden="true"></div>
+
+            <div class="desktop-intro" id="desktop-intro">
+                <p>PERSONNEL FILE / JF-01</p>
+                <h1>JOÃO<br>FERNANDES</h1>
+                <span>BUILDING COMPANIES AROUND COMPLEX TECHNOLOGY</span>
+            </div>
+
+            <aside class="mission-files collapsed" id="mission-files" aria-label="Mission files">
+                <div class="panel-title">
+                    <span>MISSION FILES</span>
+                    <small>SELECT VECTOR</small>
+                </div>
+                <button type="button" data-flight-target="satelyx">
+                    <span>01</span><i class="file-icon">TXT</i><strong>SATELYX</strong><small>PRIMARY_STATION</small>
+                </button>
+                <button type="button" data-flight-target="ai">
+                    <span>02</span><i class="file-icon">SYS</i><strong>AI LAYER</strong><small>OPERATING_RELAY</small>
+                </button>
+                <button type="button" data-flight-target="obra">
+                    <span>03</span><i class="file-icon file-icon-amber">EXE</i><strong>OBRAXRAY</strong><small>FOUNDER_OUTPOST</small>
+                </button>
+                <button type="button" data-flight-target="archive">
+                    <span>04</span><i class="file-icon file-icon-muted">DIR</i><strong>ARCHIVE</strong><small>PREVIOUS_MISSIONS</small>
+                </button>
+                <button type="button" data-flight-target="comms">
+                    <span>05</span><i class="file-icon">COM</i><strong>COMMS</strong><small>OPEN_CHANNEL</small>
+                </button>
+            </aside>
+
+            <section class="pilot-brief" id="pilot-brief" aria-live="polite">
+                <span>WELCOME, OPERATOR</span>
+                <strong>SELECT A MISSION FILE</strong>
+                <p>Choose a destination to engage autopilot, or fly manually using <kbd>WASD</kbd> / <kbd>ARROWS</kbd>. Docking opens the file.</p>
+            </section>
+
+            <div class="dock-alert" id="dock-alert" hidden aria-live="assertive">
+                <span>DOCKING SEQUENCE COMPLETE</span>
+                <strong id="dock-name">SATELYX</strong>
+                <p>MOUNTING FILE...</p>
+            </div>
+        </section>
+
+        <section class="window-layer" id="window-layer" aria-label="Open mission files">
+            <article class="os-window os-window-large" data-window="satelyx" role="dialog" aria-modal="false" aria-labelledby="satelyx-title" hidden>
+                <header class="window-titlebar">
+                    <div><i class="title-file-icon">TXT</i><strong id="satelyx-title">SATELYX_PRIMARY_MISSION.TXT</strong></div>
+                    <div class="window-controls">
+                        <button type="button" data-window-action="minimize" aria-label="_ Minimize SATELYX file">_</button>
+                        <button type="button" data-window-action="maximize" aria-label="□ Maximize SATELYX file">□</button>
+                        <button type="button" data-window-action="close" aria-label="× Close SATELYX file">×</button>
+                    </div>
+                </header>
+                <div class="window-menubar"><span>FILE</span><span>VIEW</span><span>MISSION</span><span>HELP</span><small>READ ONLY</small></div>
+                <div class="window-body satelyx-file">
+                    <div class="file-kicker"><span>FILE 01 / PRIMARY MISSION</span><time>ACTIVE</time></div>
+                    <div class="file-hero">
+                        <div>
+                            <p class="prompt-line">C:\MISSION\SATELYX\ROLE.TXT</p>
+                            <h2>Building the operating system behind SATELYX.</h2>
+                        </div>
+                        <div class="role-stamp"><span>ROLE</span><strong>GENERAL MANAGER</strong><small>OPERATIONS / COMMERCIAL EXECUTION / SYSTEMS</small></div>
+                    </div>
+                    <p class="file-lede">SATELYX is an Agile Prime for responsive space. We validate space technology in orbit and turn what works into reusable, flight-proven capability, combining venture-building and market-development experience with deep satellite engineering.</p>
+                    <div class="text-columns">
+                        <section>
+                            <span>01 / OPERATING INFRASTRUCTURE</span>
+                            <p>I build and run the system connecting CRM, pipeline management, tasks, meeting intelligence, data rooms, and reporting.</p>
+                        </section>
+                        <section>
+                            <span>02 / COMMERCIAL EXECUTION</span>
+                            <p>I support business development from research and outreach through meetings, proposals, follow-ups, and account progression.</p>
+                        </section>
+                        <section>
+                            <span>03 / TEAM COORDINATION</span>
+                            <p>I turn strategy into repeatable execution, keeping priorities, ownership, decisions, progress, and next actions visible.</p>
+                        </section>
+                        <section>
+                            <span>04 / SYSTEM CAPACITY</span>
+                            <p>I build AI-enabled internal systems that help a distributed team operate faster without adding unnecessary operational weight.</p>
+                        </section>
+                    </div>
+                    <div class="system-diagram" role="img" aria-label="SATELYX operating system">
+                        <div class="diagram-core">SATELYX HQ<small>OPERATING PICTURE</small></div>
+                        <span>COMMERCIAL<br>INTELLIGENCE</span><span>EXECUTION<br>PIPELINE</span><span>INSTITUTIONAL<br>MEMORY</span><span>MANAGEMENT<br>VISIBILITY</span>
+                    </div>
+                    <a class="external-command" href="https://satelyx.com/" target="_blank" rel="noopener noreferrer">RUN SATELYX.COM ↗</a>
+                </div>
+                <footer class="window-statusbar"><span>LINE 01, COL 01</span><span>UTF-8</span><span>PRIMARY MISSION</span></footer>
+            </article>
+
+            <article class="os-window" data-window="ai" role="dialog" aria-modal="false" aria-labelledby="ai-title" hidden>
+                <header class="window-titlebar">
+                    <div><i class="title-file-icon title-file-icon-cyan">SYS</i><strong id="ai-title">AI_OPERATING_LAYER.SYS</strong></div>
+                    <div class="window-controls">
+                        <button type="button" data-window-action="minimize" aria-label="_ Minimize AI file">_</button>
+                        <button type="button" data-window-action="maximize" aria-label="□ Maximize AI file">□</button>
+                        <button type="button" data-window-action="close" aria-label="× Close AI file">×</button>
+                    </div>
+                </header>
+                <div class="window-menubar"><span>SYSTEM</span><span>PROCESS</span><span>MEMORY</span><small>RUNNING</small></div>
+                <div class="window-body ai-file">
+                    <div class="file-kicker"><span>FILE 02 / OPERATING RELAY</span><time>ACTIVE</time></div>
+                    <p class="prompt-line">C:\SYSTEM\AI\OPERATING_LAYER.SYS</p>
+                    <h2>AI should change how the company operates.</h2>
+                    <p class="file-lede">I use AI as an operating layer across research, meetings, knowledge, commercial execution, and internal reporting. People own the judgment, relationships, and outcomes. The system handles repetition, retrieval, routing, and preparation.</p>
+                    <div class="process-list">
+                        <div><i></i><span>PROC_01</span><strong>RESEARCH INTELLIGENCE</strong><small>GATHER / QUALIFY / CONNECT</small><b>RUNNING</b></div>
+                        <div><i></i><span>PROC_02</span><strong>MEETING INTELLIGENCE</strong><small>CAPTURE / DECIDE / ROUTE</small><b>RUNNING</b></div>
+                        <div><i></i><span>PROC_03</span><strong>KNOWLEDGE SYSTEMS</strong><small>STORE / RETRIEVE / RECONCILE</small><b>RUNNING</b></div>
+                        <div><i></i><span>PROC_04</span><strong>EXECUTION SUPPORT</strong><small>BRIEF / FOLLOW UP / REPORT</small><b>RUNNING</b></div>
+                    </div>
+                    <blockquote>A lean team can cover work that previously required a much larger operation, without losing visibility or discipline.</blockquote>
+                </div>
+                <footer class="window-statusbar"><span>4 PROCESSES</span><span>0 ERRORS</span><span>HUMAN OVERSIGHT ENABLED</span></footer>
+            </article>
+
+            <article class="os-window os-window-large os-window-amber" data-window="obra" role="dialog" aria-modal="false" aria-labelledby="obra-title" hidden>
+                <header class="window-titlebar">
+                    <div><i class="title-file-icon title-file-icon-amber">EXE</i><strong id="obra-title">OBRAXRAY_FOUNDER_OUTPOST.EXE</strong></div>
+                    <div class="window-controls">
+                        <button type="button" data-window-action="minimize" aria-label="_ Minimize ObraXRAY file">_</button>
+                        <button type="button" data-window-action="maximize" aria-label="□ Maximize ObraXRAY file">□</button>
+                        <button type="button" data-window-action="close" aria-label="× Close ObraXRAY file">×</button>
+                    </div>
+                </header>
+                <div class="window-menubar"><span>PRODUCT</span><span>OPERATIONS</span><span>STATUS</span><small>LOW-TOUCH</small></div>
+                <div class="window-body obra-file">
+                    <div class="file-kicker file-kicker-amber"><span>FILE 03 / FOUNDER OUTPOST</span><time>ONLINE</time></div>
+                    <div class="file-hero">
+                        <div>
+                            <p class="prompt-line">C:\OUTPOST\OBRAXRAY\FOUNDER.LOG</p>
+                            <h2>Built from the problem up. Designed to run lean.</h2>
+                        </div>
+                        <div class="role-stamp role-stamp-amber"><span>ROLE</span><strong>CO-FOUNDER<br>&amp; CEO</strong><small>PRODUCT / GROWTH / PARTNERSHIPS</small></div>
+                    </div>
+                    <p class="file-lede">ObraXRAY is an independent Portuguese platform for checking construction companies before signing a contract. It connects official public records and turns them into a current risk view that homeowners and businesses can act on.</p>
+                    <p>I co-founded the company with my brother and lead product, growth, partnerships, and communication. The product cross-references nine official Portuguese sources and runs more than twenty checks across company, legal, licensing, debt, and director history.</p>
+                    <div class="low-touch-box">
+                        <span>OPERATING STATUS / LOW DAILY LOAD</span>
+                        <strong>MY DAY-TO-DAY FOCUS IS SATELYX.</strong>
+                        <p>ObraXRAY was designed from the start to run with a low daily operating load. Automated workers handle routine data collection, analysis, report generation, source monitoring, and recovery. My brother and I focus on product decisions, exceptions, partnerships, and growth.</p>
+                    </div>
+                    <div class="automation-loop">
+                        <span>COLLECT</span><i>→</i><span>ANALYSE</span><i>→</i><span>GENERATE</span><i>→</i><span>MONITOR</span><i>↻</i>
+                    </div>
+                    <p class="human-line"><span>HUMAN OVERSIGHT</span> PRODUCT DECISIONS / EXCEPTIONS / PARTNERSHIPS / GROWTH</p>
+                    <a class="external-command external-command-amber" href="https://obraxray.com/" target="_blank" rel="noopener noreferrer">RUN OBRAXRAY.COM ↗</a>
+                </div>
+                <footer class="window-statusbar"><span>AUTOMATION ONLINE</span><span>HUMAN OVERSIGHT</span><span>FOUNDER OUTPOST</span></footer>
+            </article>
+
+            <article class="os-window" data-window="archive" role="dialog" aria-modal="false" aria-labelledby="archive-title" hidden>
+                <header class="window-titlebar">
+                    <div><i class="title-file-icon title-file-icon-muted">DIR</i><strong id="archive-title">PREVIOUS_MISSIONS.DIR</strong></div>
+                    <div class="window-controls">
+                        <button type="button" data-window-action="minimize" aria-label="_ Minimize archive">_</button>
+                        <button type="button" data-window-action="maximize" aria-label="□ Maximize archive">□</button>
+                        <button type="button" data-window-action="close" aria-label="× Close archive">×</button>
+                    </div>
+                </header>
+                <div class="window-menubar"><span>FILE</span><span>EDIT</span><span>VIEW</span><small>3 OBJECTS</small></div>
+                <div class="window-body archive-file">
+                    <div class="file-kicker"><span>FILE 04 / EXPERIENCE ARCHIVE</span><time>2022-2026</time></div>
+                    <p class="prompt-line">C:\ARCHIVE\BLOCKCHAIN_INFRASTRUCTURE\</p>
+                    <h2>Infrastructure and ecosystem building.</h2>
+                    <p class="file-lede">Before SATELYX, I worked across Native, Rollux, and Syscoin, three companies building blockchain infrastructure. My role consistently sat between product and market.</p>
+                    <div class="archive-folders">
+                        <section><i class="folder-icon"></i><div><h3>NATIVE.TXT</h3><span>COMMERCIAL AND PARTNER SYSTEMS</span><p>Built the commercial and partner function for a pre-launch interoperability product, managed relationships and integrations, and rebuilt the pipeline and positioning through a major platform transition.</p></div></section>
+                        <section><i class="folder-icon"></i><div><h3>ROLLUX.TXT</h3><span>LAUNCH STRATEGY AND ECOSYSTEM</span><p>Helped shape the early pitch, partner strategy, launch pipeline, and onboarding model, translating technical architecture into material commercial teams and partners could use.</p></div></section>
+                        <section><i class="folder-icon"></i><div><h3>SYSCOIN.TXT</h3><span>MARKET DEVELOPMENT OPERATIONS</span><p>Built early operating systems for market development, including CRM, shared documentation, partner tracking, community programmes, and lead generation.</p></div></section>
+                    </div>
+                    <div class="carry-file"><span>CAPABILITIES_CARRIED_FORWARD.TXT</span><p>Market creation around difficult technology / Partner and integration management / Technical translation / Commercial positioning / Community and adoption systems / Operating inside early, fast-changing companies</p></div>
+                </div>
+                <footer class="window-statusbar"><span>3 FILES</span><span>ARCHIVE INDEXED</span><span>READ ONLY</span></footer>
+            </article>
+
+            <article class="os-window" data-window="comms" role="dialog" aria-modal="false" aria-labelledby="comms-title" hidden>
+                <header class="window-titlebar">
+                    <div><i class="title-file-icon">COM</i><strong id="comms-title">OPEN_CHANNEL.COM</strong></div>
+                    <div class="window-controls">
+                        <button type="button" data-window-action="minimize" aria-label="_ Minimize communications">_</button>
+                        <button type="button" data-window-action="maximize" aria-label="□ Maximize communications">□</button>
+                        <button type="button" data-window-action="close" aria-label="× Close communications">×</button>
+                    </div>
+                </header>
+                <div class="window-menubar"><span>CHANNEL</span><span>ENCRYPTION</span><small>OPEN</small></div>
+                <div class="window-body comms-file">
+                    <div class="file-kicker"><span>FILE 05 / COMMUNICATIONS</span><time>ONLINE</time></div>
+                    <p class="prompt-line">C:\COMMS\CONTACTS.LNK</p>
+                    <h2>Send a transmission.</h2>
+                    <p>Professional conversations, company building, space, operating systems, and difficult products made understandable.</p>
+                    <div class="comms-links">
+                        <a href="https://linkedin.com/in/joaofernandeszk" target="_blank" rel="noopener noreferrer"><span>01</span><strong>LINKEDIN</strong><i>↗</i></a>
+                        <a href="https://x.com/joaofernandeszk" target="_blank" rel="noopener noreferrer"><span>02</span><strong>X / TWITTER</strong><i>↗</i></a>
+                        <a href="https://t.me/joaofernandeszk" target="_blank" rel="noopener noreferrer"><span>03</span><strong>TELEGRAM</strong><i>↗</i></a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <h3>Satelyx</h3>
-                    <p class="project-type">Founding Member</p>
-                    <p>Space mission integrator validating hardware in orbit and building a catalog of flight-proven components, with the VLEO-1 mission targeting 2027. Small team, so I lean heavily on AI: agentic workflows, research pipelines, and internal tools that let a few of us cover a lot of ground.</p>
-                    <div class="project-links">
-                        <a href="https://satelyx.com/" target="_blank" rel="noopener noreferrer">Website</a>
-                        <a href="https://x.com/Satelyx" target="_blank" rel="noopener noreferrer">X</a>
-                    </div>
-                </div>
-            </div>
-            <p class="previous-note">Previously: Native (BTCFi on Sui), Rollux (Bitcoin L2), Syscoin (Bitcoin L1). <a href="/cv">Full history on my CV</a></p>
-        </div>
-    </section>
+                <footer class="window-statusbar"><span>SIGNAL CLEAR</span><span>CHANNEL OPEN</span></footer>
+            </article>
+        </section>
 
-    <!-- Personal -->
-    <section class="section fade-in" id="personal">
-        <div class="container">
-            <h2>Outside of work</h2>
-            <p class="about-text">Most of my free time goes to AI. I try every new tool, vibecode apps and websites, build agentic workflows, and generally spend way too much time figuring out what's possible right now. I pay for Claude Max and use it constantly, for building, research, and just thinking through problems. I genuinely think this stuff is changing what small teams are capable of, and I like being early to it.</p>
-            <p class="about-text">Gaming has always been my go-to outside of work. FPS games, handhelds, casual stuff with friends. I still love it, but lately AI has taken over most of that time, and these days I'd rather spend a Sunday building something than grinding ranked.</p>
-            <p class="about-text">I like technically interesting products that are communicated simply. If you're building something weird and early, I probably want to hear about it.</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer fade-in">
-        <div class="container">
-            <p class="footer-cta">Let's talk</p>
-            <div class="footer-links">
-                <a href="https://x.com/joaofernandeszk" target="_blank" rel="noopener noreferrer">X</a>
-                <a href="https://linkedin.com/in/joaofernandeszk" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="https://t.me/joaofernandeszk" target="_blank" rel="noopener noreferrer">Telegram</a>
-                <a href="/cv">CV</a>
-            </div>
-            <p class="footer-brand">joaozk.com</p>
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var observer = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.fade-in').forEach(function (el) {
-                observer.observe(el);
-            });
-        });
-    </script>
-
+    </main>
 </body>
 
 </html>
