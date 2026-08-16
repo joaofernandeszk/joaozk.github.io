@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 150" fill="none">
+  <defs>
+    <linearGradient id="hull" x1="20" y1="75" x2="220" y2="75" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A2527"/>
+      <stop offset=".48" stop-color="#E8F2EF"/>
+      <stop offset="1" stop-color="#65787A"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="152" y1="55" x2="185" y2="75" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DFFFF7"/>
+      <stop offset=".35" stop-color="#42D9BD"/>
+      <stop offset="1" stop-color="#082623"/>
+    </linearGradient>
+    <filter id="jade" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g stroke-linejoin="round">
+    <path d="M18 75 63 51l41-31 57 18 59 37-59 37-57 18-41-31-45-24Z" fill="#080D0F" stroke="#5D6D70" stroke-width="2"/>
+    <path d="m35 75 62-30 57-2 58 32-58 32-57-2-62-30Z" fill="url(#hull)" stroke="#D9E6E2" stroke-opacity=".8" stroke-width="1.5"/>
+    <path d="m51 75 60-14 45 2 30 12-30 12-45 2-60-14Z" fill="#121D1F" stroke="#273A3D"/>
+    <path d="m68 57 34-33 23 8-18 28-39-3Zm0 36 34 33 23-8-18-28-39 3Z" fill="#202D2F" stroke="#718285" stroke-width="1.5"/>
+    <path d="m132 51 32-6 33 30-33 30-32-6 20-24-20-24Z" fill="#B9C8C5" stroke="#F3FAF8" stroke-width="1.5"/>
+    <path d="m151 62 15-5 19 18-19 18-15-5 9-13-9-13Z" fill="url(#glass)" stroke="#AFFFF0" stroke-width="1.5"/>
+    <path d="M75 67h56v16H75z" fill="#071311" stroke="#16B892" stroke-width="1.5"/>
+    <path d="M83 71h34m-34 4h43m-43 4h25" stroke="#78F5D8" stroke-width="1" opacity=".72"/>
+    <path d="M27 64 9 52v17l12 6-12 6v17l18-12V64Z" fill="#101A1C" stroke="#516366" stroke-width="1.5"/>
+    <path d="M8 75H0" stroke="#16B892" stroke-width="5" filter="url(#jade)"/>
+    <circle cx="146" cy="75" r="3.5" fill="#DFFFF7" filter="url(#jade)"/>
+    <path d="M109 34 99 54m10 62-10-20M46 68v14" stroke="#AEBDBA" stroke-width="1" opacity=".75"/>
+  </g>
+</svg>
