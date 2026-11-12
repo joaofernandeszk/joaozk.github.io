@@ -1171,6 +1171,7 @@ summary:focus-visible {
     width: 100%;
     max-width: 280px;
     height: auto;
+    margin-inline: auto;
 }
 
 .project-role {
