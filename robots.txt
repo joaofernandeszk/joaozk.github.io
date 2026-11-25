@@ -2,6 +2,5 @@ User-agent: *
 Allow: /
 Disallow: /cv/
 Disallow: /banner/
-Disallow: /writing/
 
 Sitemap: https://joaozk.com/sitemap.xml

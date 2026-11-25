@@ -312,6 +312,19 @@ summary:focus-visible {
     letter-spacing: -0.025em;
 }
 
+.hero-roles {
+    display: block;
+    margin-bottom: 18px;
+    color: var(--burgundy);
+    font: 700 11px / 1.5 var(--body);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.hero-roles span {
+    white-space: nowrap;
+}
+
 .continue-link {
     grid-column: 1;
     grid-row: 3;
